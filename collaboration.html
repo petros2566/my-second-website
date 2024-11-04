@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <title>Collaboration and Workflow Tools</title>
+    <style>
+        /* Black background with white text */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            padding: 30px;
+            color: #b3c5d6;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 1.5px;
+        }
+
+        /* Container for insights */
+        .insights {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns for the top panels */
+            gap: 20px;
+            padding: 20px;
+            width: 80%; /* Adjust width */
+            max-width: 1300px; /* Limit the maximum width */
+            margin: auto; /* Center the container */
+        }
+
+        /* Panel styling */
+        .insight-panel {
+            border: 1px solid white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            background-color: #2e3d4f; /* Dark blue background for collaboration theme */
+        }
+
+        /* Styling for buttons */
+        button {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: white;
+            color: black;
+            border-color: black;
+            transform: translateY(-6px);
+        }
+
+        .logo {
+            text-align: center; /* Center the logo */
+            margin-bottom: 20px; /* Add space below the logo */
+        }
+
+        .logo img {
+            max-width: 225px; /* Adjust the logo size */
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="Original Logo.png" alt="Design AI Logo">
+    </div>
+    <!-- Header Section -->
+    <header>
+        <h1>Collaboration and Workflow Tools</h1>
+        <p>Enhance Team Collaboration and Optimize Workflow Efficiency</p>
+    </header>
+
+    <!-- Feature Panels arranged in grid layout -->
+    <section class="insights">
+        <!-- Integration with CAD Tools Panel -->
+        <div class="insight-panel">
+            <h2>Integration with CAD Tools</h2>
+            <p>Seamlessly connect with existing design software for enhanced productivity.</p>
+            <button>Integrate Now</button>
+        </div>
+
+        <!-- Real-Time Collaboration Panel -->
+        <div class="insight-panel">
+            <h2>Real-Time Collaboration</h2>
+            <p>Facilitate live collaboration and instant feedback across design teams.</p>
+            <button>Collaborate in Real-Time</button>
+        </div>
+
+        <!-- Design Improvement Suggestions Panel -->
+        <div class="insight-panel">
+            <h2>Design Improvement Suggestions</h2>
+            <p>AI-driven suggestions to enhance design quality and avoid bottlenecks.</p>
+            <button>Get Suggestions</button>
+        </div>
+
+        <!-- AI-Driven Project Management Panel -->
+        <div class="insight-panel">
+            <h2>AI-Driven Project Management</h2>
+            <p>Efficiently allocate resources and adjust timelines to match team capacity.</p>
+            <button>Manage Projects</button>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Design AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css.css">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: black;
+            z-index: 1000;
+        }
+
+        /* Navigation Bar List */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar List Items */
+        nav ul li {
+            margin-left: 7px;
+        }
+
+        /* Anchor Link Buttons */
+        nav ul li a.button {
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px 20px;
+            margin: 0;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a.button:hover {
+            color: rgb(255, 255, 255);
+            transform: translateY(-10px);
+            cursor: pointer;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: -14px;
+            left: 43%;
+        }
+
+        .logo img {
+            max-width: 225px;
+        }
+
+        /* Main Section */
+        .main {
+            display: flex;
+            justify-content: center;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .form-container {
+            max-width: 400px;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            margin: 200px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Form Heading */
+        .form-container h1 {
+            text-align: center;
+            font-family: 'Lora', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        /* Input Fields */
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #222;
+            color: white;
+        }
+
+        /* Button Styles */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3b5b96;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button Hover Effect */
+        button:hover {
+            background-color: #2b4e8f;
+        }
+
+        /* Link Styles */
+        p {
+            text-align: center;
+            color: white;
+        }
+
+        a {
+            color: #3b5b96;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a class="button" href="index.html">Home</a></li>
+            <li><a class="button" href="#">How it works</a></li>
+            <li><a class="button" href="#">About us</a></li>
+            <li><a class="button" href="#">Contact us</a></li>
+        </ul>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="Original Logo.png" alt="Design AI Logo">
+            </div>
+        </div>
+    </nav>
+    <!-- Registration Section -->
+    <div class="form-container">
+        <h1>Sign Up</h1>
+        <form action="dashboard.html" method="POST">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Log in here</a></p>
+    </div>
+</body>
+</html>

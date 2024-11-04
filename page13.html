@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+   
+</head>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a class="button" href="index.html">Home</a></li>
+            <li><a class="button" href="#">How it works</a></li>
+            <li><a class="button" href="#">About us</a></li>
+            <li><a class="button" href="#">Contact us</a></li>
+        </ul>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="Original Logo.png" alt="Design AI Logo">
+            </div>
+            
+        </div>
+        <!-- Log In Button -->
+        <a href="page11.html" class="login-button">Log In</a>
+    </nav>
+    ,<style>
+        nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: black;
+    z-index: 1000; /* Ensure the navigation is above other content */
+}
+
+/* Navigation Bar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar List Items */
+nav ul li {
+    margin-left: 7px;
+}
+
+/* Anchor Link Buttons */
+nav ul li a.button {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px 20px; /* Set proper padding */
+    margin: 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Button Hover */
+nav ul li a.button:hover {
+    color: rgb(255, 255, 255);
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+/* Center the logo in the navigation bar */
+.logo-container {
+    position: absolute; /* Position the logo at the top */
+    top: -14px;
+    left: 43%;
+
+}
+
+.logo img {
+    max-width: 225px; /* Adjust the logo size */
+}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Dark background */
+            color: #ffffff; /* White text */
+            line-height: 1.6;
+            min-height: 100vh;
+            height: 100%;
+        }
+        
+        header {
+            text-align: center;
+            padding: 50px 0;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            height: 100%;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+
+        .step h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 1.2em;
+        }
+
+        .step img {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta button {
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cta button:hover {
+            background-color: #ffffff;
+            color: #121212;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid #ffffff;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .step {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .step:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .step-text, .step-image {
+                width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>How Our AI Transforms Design</h1>
+    <p>See how our AI tools revolutionize the design process, from data insights to usability testing.</p>
+</header>
+
+<div class="content-section">
+    <div class="step">
+        <div class="step-text">
+            <h2>Step 1: Data-Driven Design Insights</h2>
+            <p>Our AI analyzes customer feedback, market trends, and competitor data to help you make informed decisions at the start of your design process. This allows you to anticipate future trends and stay ahead of the competition.</p>
+        </div>
+        <div class="step-image">
+            <img src="data-insights.png" alt="Data Insights">
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-text">
+            <h2>Step 2: Generative Design Tools</h2>
+            <p>With our AI, you can generate multiple design variations based on real-time constraints like materials, costs, or customer preferences. Rapid prototyping and optimization have never been easier.</p>
+        </div>
+        <div class="step-image">
+            <img src="generative-design.png" alt="Generative Design">
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-text">
+            <h2>Step 3: AI-Powered Usability Testing</h2>
+            <p>Our platform uses advanced simulations like eye-tracking and heatmaps to optimize the user experience of your product. AI-driven A/B testing ensures you deliver the best design, backed by data.</p>
+        </div>
+        <div class="step-image">
+            <img src="usability-testing.png" alt="Usability Testing">
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-text">
+            <h2>Step 4: Sustainability Insights</h2>
+            <p>AI can help you design with the environment in mind by analyzing material choices, energy consumption, and life cycle impacts to suggest more sustainable alternatives.</p>
+        </div>
+        <div class="step-image">
+            <img src="sustainability.png" alt="Sustainability Insights">
+        </div>
+    </div>
+</div>
+
+<div class="cta">
+    <button onclick="window.location.href='/signup.html'">Start Your Free Trial</button>
+</div>
+
+<footer>
+    <p>© 2024 Your AI Company. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

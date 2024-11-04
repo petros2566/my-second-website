@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css.css"> 
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a class="button" href="index.html">Home</a></li>
+            <li><a class="button" href="#">How it works</a></li>
+            <li><a class="button" href="#">About us</a></li>
+            <li><a class="button" href="#">Profile</a></li>
+        </ul>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="Original Logo.png" alt="Design AI Logo">
+        
+            </div>
+        </div>
+        <!-- Log In Button -->
+        <a class="login-button">Logged In</a>
+
+    </nav>
+    
+    <!-- Main Section -->
+    <section class="main">
+        <div class="line"></div>
+
+        <!-- Left Column -->
+        <div class="column left">
+            <a href="datadrivendesigninsights.html" target="_self"><button class="button">Data-Driven Design Insights</button></a>
+            <a href="aipoweredusability.html" target="_self"><button class="button">AI-Powered Usability<span>Testing</span></button></a>
+            <a href="processautomation.html" target="_self"><button class="button">Process Automation<span>Solutions</span></button></a>
+            <a href="customization.html" target="_self"><button class="button">Customization and<span>Personalization Platform</span></button></a>
+        </div>
+
+        <!-- Right Column -->
+        <div class="column right">
+            <a href="generative.html" target="_self"><button class="button">Generative Design Tools</button></a>
+            <a href="sustainbility.html" target="_self"><button class="button">Sustainability Insights</button></a>
+            <a href="testingsimulation.html" target="_self"><button class="button">AI-Driven Product Testing<span>and Simulation</span></button></a>
+            <a href="collaboration.html" target="_self"><button class="button">Collaboration and<span>Workflow Tools</span></button></a>
+        </div>
+
+</div>
+</section>
+</body>
+</html>
+<style>
+.login-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #39b906;
+    color: white;
+    border-radius: 9px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    cursor: text
+}
+.login-button:hover {
+    background-color: #39b906;
+    transform: translateY(-0px);
+}
+</style>
+
+
+    
+    <script>
+        // Get the token from local storage
+        const token = localStorage.getItem('token');
+    
+        // Check if the token exists
+        if (!token) {
+            // If not, redirect to the login page
+            window.location.href = 'login.html'; // Ensure this path is correct
+        } else {
+            // Make a request to the dashboard endpoint with the token
+            fetch('http://localhost:3000/dashboard', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}` // Include the token in the Authorization header
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Access denied. Invalid token.');
+                }
+            })
+            .then(data => {
+                const messageElement = document.getElementById('message');
+                messageElement.innerText = data.message;
+    
+                // Immediately hide the message
+                messageElement.innerText = ''; // Clear the message right after displaying
+            })
+            .catch(err => {
+                document.getElementById('message').innerText = err.message;
+            });
+        }
+    </script>
+    
+    
+</body>
+</html>
+
+
+
+
+

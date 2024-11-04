@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <title>Process Automation Solutions</title>
+    <style>
+        /* Black background with white text */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            color: #b3c5d6;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 1.5px;
+        }
+
+        /* Container for insights */
+        .insights {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns for the top panels */
+            gap: 20px;
+            padding: 20px;
+            width: 80%; /* Adjust width */
+            max-width: 1300px; /* Limit the maximum width */
+            margin: auto; /* Center the container */
+        }
+
+        /* Panel styling */
+        .insight-panel {
+            border: 1px solid white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            background-color: #2e3d4f; /* Dark blue background for consistency */
+        }
+
+        /* Styling for buttons */
+        button {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: white;
+            color: black;
+            border-color: black;
+            transform: translateY(-6px);
+        }
+
+        .logo {
+            text-align: center; /* Center the logo */
+            margin-bottom: 20px; /* Add space below the logo */
+        }
+
+        .logo img {
+            max-width: 225px; /* Adjust the logo size */
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="Original Logo.png" alt="Design AI Logo">
+    </div>
+    <!-- Header Section -->
+    <header>
+        <h1>Process Automation Solutions</h1>
+        <p>Streamline Design Workflows with Advanced Automation Tools</p>
+    </header>
+
+    <!-- Feature Panels arranged in grid layout -->
+    <section class="insights">
+        <!-- Task Automation Panel -->
+        <div class="insight-panel">
+            <h2>Task Automation</h2>
+            <p>Automates repetitive tasks like rendering, 3D modeling, and material selection.</p>
+            <button>Automate Tasks</button>
+        </div>
+
+        <!-- AI-Driven Version Control Panel -->
+        <div class="insight-panel">
+            <h2>AI-Driven Version Control</h2>
+            <p>Tracks design iterations, allowing for easy comparisons and rollbacks.</p>
+            <button>Manage Versions</button>
+        </div>
+
+    </section>
+</body>
+</html>
+
