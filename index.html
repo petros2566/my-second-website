@@ -36,18 +36,18 @@
 
         <!-- Left Column -->
         <div class="column left">
-            <a href="datadrivendesigninsights.html" target="_self"><button class="button">Data-Driven Design Insights</button></a>
-            <a href="aipoweredusability.html" target="_self"><button class="button">AI-Powered Usability<span>Testing</span></button></a>
-            <a href="processautomation.html" target="_self"><button class="button">Process Automation<span>Solutions</span></button></a>
-            <a href="customization.html" target="_self"><button class="button">Customization and<span>Personalization Platform</span></button></a>
+            <a href="datadrivendesigninsights.html" target="_self"><button id="p1" class="button">DesignInsight AI</button></a>
+            <a href="aipoweredusability.html" target="_self"><button class="button">UsabilityMaster AI</button></a>
+            <a href="processautomation.html" target="_self"><button class="button">AutoProcess AI</button></a>
+            <a href="customization.html" target="_self"><button class="button">CustomCraft AI</button></a>
         </div>
 
         <!-- Right Column -->
         <div class="column right">
-            <a href="generative.html" target="_self"><button class="button">Generative Design Tools</button></a>
-            <a href="sustainbility.html" target="_self"><button class="button">Sustainability Insights</button></a>
-            <a href="testingsimulation.html" target="_self"><button class="button">AI-Driven Product Testing<span>and Simulation</span></button></a>
-            <a href="collaboration.html" target="_self"><button class="button">Collaboration and<span>Workflow Tools</span></button></a>
+            <a href="generative.html" target="_self"><button class="button">GenCreate AI</button></a>
+            <a href="sustainbility.html" target="_self"><button class="button">EcoDesign AI</button></a>
+            <a href="testingsimulation.html" target="_self"><button class="button">SimulatePro AI</button></a>
+            <a href="collaboration.html" target="_self"><button class="button">TeamFlow AI</button></a>
         </div>
 
 </div>
@@ -73,9 +73,49 @@
     transform: translateY(-0px);
 }
 </style>
-      
+
+
+    
+    <script>
+        // Get the token from local storage
+        const token = localStorage.getItem('token');
+    
+        // Check if the token exists
+        if (!token) {
+            // If not, redirect to the login page
+            window.location.href = 'login.html'; // Ensure this path is correct
+        } else {
+            // Make a request to the dashboard endpoint with the token
+            fetch('http://localhost:3000/dashboard', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}` // Include the token in the Authorization header
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Access denied. Invalid token.');
+                }
+            })
+            .then(data => {
+                const messageElement = document.getElementById('message');
+                messageElement.innerText = data.message;
+    
+                // Immediately hide the message
+                messageElement.innerText = ''; // Clear the message right after displaying
+            })
+            .catch(err => {
+                document.getElementById('message').innerText = err.message;
+            });
+        }
+    </script>
+    
+    
 </body>
 </html>
+
 
 
 
