@@ -181,44 +181,7 @@
             <button type="submit">Log In</button>
         </form>
         <div id="errorMessage" style="color: red; text-align: center;"></div> <!-- Added error message div -->
-        <script>
-            // Select the login form by its ID
-            const form = document.getElementById('loginForm');
-        
-            // Add an event listener for when the form is submitted
-            form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the default form submission behavior
-        
-                // Get the username and password values from the input fields
-                const username = document.getElementById('username').value;
-                const password = document.getElementById('password').value;
-        
-                // Send a POST request to the login endpoint
-                fetch('http://localhost:3000/login', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json' // Set the content type to JSON
-                    },
-                    body: JSON.stringify({ username, password }) // Send the username and password as JSON
-                })
-                .then(response => {
-                    if (response.ok) {
-                        return response.json(); // If response is OK, parse JSON
-                    } else {
-                        throw new Error('Invalid credentials'); // Throw an error for bad responses
-                    }
-                })
-                .then(data => {
-    localStorage.setItem('token', data.token); // Store the received token in local storage
-    // Redirect to the dashboard.html page
-    window.location.href = 'dashboard.html'; // Change this line
-})
-                .catch(err => {
-                    // Display the error message in an error message div
-                    document.getElementById('errorMessage').innerText = err.message;
-                });
-            });
-        </script>
+      
         
         <p>Don't have an account? <a href="page12.html">Sign Up here</a></p>
     </div>
