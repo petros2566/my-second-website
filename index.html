@@ -76,42 +76,7 @@
 
 
     
-    <script>
-        // Get the token from local storage
-        const token = localStorage.getItem('token');
-    
-        // Check if the token exists
-        if (!token) {
-            // If not, redirect to the login page
-            window.location.href = 'login.html'; // Ensure this path is correct
-        } else {
-            // Make a request to the dashboard endpoint with the token
-            fetch('http://localhost:3000/dashboard', {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${token}` // Include the token in the Authorization header
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error('Access denied. Invalid token.');
-                }
-            })
-            .then(data => {
-                const messageElement = document.getElementById('message');
-                messageElement.innerText = data.message;
-    
-                // Immediately hide the message
-                messageElement.innerText = ''; // Clear the message right after displaying
-            })
-            .catch(err => {
-                document.getElementById('message').innerText = err.message;
-            });
-        }
-    </script>
-    
+   
     
 </body>
 </html>
